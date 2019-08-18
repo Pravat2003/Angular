@@ -1,0 +1,40 @@
+<table mat-table [dataSource]="dataSource" width="100%" class="mat-elevation-z12">
+    <ng-container matColumnDef="status">
+        <th mat-header-cell width="150" *matHeaderCellDef> Status </th>
+        <td mat-cell *matCellDef="let element"> {{element.status}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dealName">
+        <th mat-header-cell width="150" *matHeaderCellDef> Deal Name </th>
+        <td mat-cell *matCellDef="let element"> {{element.dealName}} </td>
+    </ng-container>
+    <ng-container matColumnDef="lastModifiedDate">
+        <th mat-header-cell width="150" *matHeaderCellDef>Last Modified Date </th>
+        <td mat-cell *matCellDef="let element"> {{element.lastModifiedDate}} </td>
+    </ng-container>
+    <ng-container matColumnDef="issueTracker">
+        <th mat-header-cell width="150" *matHeaderCellDef> Issue Tracker </th>
+        <td mat-cell *matCellDef="let element"> {{element.issueTracker}} </td>
+    </ng-container>
+    <ng-container matColumnDef="totalIssueSave">
+        <th mat-header-cell width="150" *matHeaderCellDef> Total Issue Save</th>
+        <td mat-cell *matCellDef="let element"> {{element.totalIssueSave}} </td>
+    </ng-container>
+    <ng-container matColumnDef="tenor">
+        <th mat-header-cell width="150" *matHeaderCellDef> Tenor </th>
+        <td mat-cell *matCellDef="let element"> {{element.tenor}} </td>
+    </ng-container>
+    <ng-container matColumnDef="currency">
+        <th mat-header-cell width="150" *matHeaderCellDef> Currency </th>
+        <td mat-cell *matCellDef="let element"> {{element.currency}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dealComment">
+        <th mat-header-cell width="150" *matHeaderCellDef> Deal Comment </th>
+        <td mat-cell *matCellDef="let element"> {{element.dealComment}} </td>
+    </ng-container>
+    <ng-container matColumnDef="dealAction">
+        <th mat-header-cell width="150" *matHeaderCellDef> Deal Action </th>
+        <td mat-cell *matCellDef="let element"> {{element.dealAction}} </td>
+    </ng-container>
+    <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+    <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+</table>
